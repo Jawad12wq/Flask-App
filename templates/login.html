@@ -1,8 +1,53 @@
-<h2>Login</h2>
-<form method="POST">
-    <input name="email" placeholder="Email" required><br>
-    <input name="password" type="password" placeholder="Password" required><br>
-    <button type="submit">Login</button>
-</form>
-<a href="/signup">Create account</a>
-<p>Login to access your account and continue using our services.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-600 to-indigo-600 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-10 w-full max-w-md text-center shadow-2xl animate-fade-in-up text-white">
+    <h2 class="text-3xl font-bold mb-6">Login 🔐</h2>
+
+    <form method="POST" class="space-y-4">
+      <input name="email" type="email" placeholder="Email" required
+        class="w-full px-4 py-2 rounded-lg bg-white/80 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-300 transition"/>
+
+      <input name="password" type="password" placeholder="Password" required
+        class="w-full px-4 py-2 rounded-lg bg-white/80 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 transition"/>
+
+      <button type="submit"
+        class="w-full py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white font-semibold shadow-lg transition duration-300">
+        Login
+      </button>
+    </form>
+
+    <p class="mt-4 text-sm">
+      Don’t have an account? 
+      <a href="/signup" class="text-yellow-300 hover:underline">Create one</a>
+    </p>
+
+    <p class="mt-4 text-xs text-white/70">
+      Login to access your account and continue using our services.
+    </p>
+  </div>
+
+  <style>
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-up {
+      animation: fade-in-up 1s ease-out;
+    }
+  </style>
+
+</body>
+</html>

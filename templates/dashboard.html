@@ -1,4 +1,74 @@
-<h2>Welcome, {{ user }}</h2>
-<a href="/logout">Logout</a>
-<p>Welcome to your dashboard! Here you can manage your account and access our services.</p>
-<p>Feel free to explore the features available to you.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jawad Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-500 via-indigo-600 to-blue-600 min-h-screen text-white font-sans">
+
+  <div class="p-6 max-w-6xl mx-auto animate-fade-in">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-4xl font-bold">Welcome, {{ user }} 👋</h2>
+      <a href="/logout"
+         class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg shadow-lg transition">
+        Logout
+      </a>
+    </div>
+
+    <p class="text-lg mb-4">Welcome to <span class="font-semibold text-yellow-300">Jawad Store</span>! Here you can manage your account and explore a curated selection of books and accessories.</p>
+    <p class="mb-8">Feel free to explore the features available to you.</p>
+
+    <!-- Books Section -->
+    <h3 class="text-2xl font-bold mb-4">📚 Books</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
+      <div class="bg-white/10 rounded-xl p-4 shadow-lg hover:scale-105 transition">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Book" class="rounded-md mb-2 h-48 w-full object-cover">
+        <h4 class="font-semibold text-lg">The Art of Thinking Clearly</h4>
+      </div>
+      <div class="bg-white/10 rounded-xl p-4 shadow-lg hover:scale-105 transition">
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="Book" class="rounded-md mb-2 h-48 w-full object-cover">
+        <h4 class="font-semibold text-lg">Deep Work</h4>
+      </div>
+      <div class="bg-white/10 rounded-xl p-4 shadow-lg hover:scale-105 transition">
+        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66" alt="Book" class="rounded-md mb-2 h-48 w-full object-cover">
+        <h4 class="font-semibold text-lg">Atomic Habits</h4>
+      </div>
+    </div>
+
+    <!-- Accessories Section -->
+    <h3 class="text-2xl font-bold mb-4">🎒 Accessories</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-white/10 rounded-xl p-4 shadow-lg hover:scale-105 transition">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="Watch" class="rounded-md mb-2 h-48 w-full object-cover">
+        <h4 class="font-semibold text-lg">Smart Watch</h4>
+      </div>
+      <div class="bg-white/10 rounded-xl p-4 shadow-lg hover:scale-105 transition">
+        <img src="https://images.unsplash.com/photo-1610072666229-7fbcf36d37d9" alt="Backpack" class="rounded-md mb-2 h-48 w-full object-cover">
+        <h4 class="font-semibold text-lg">Travel Backpack</h4>
+      </div>
+      <div class="bg-white/10 rounded-xl p-4 shadow-lg hover:scale-105 transition">
+        <img src="https://images.unsplash.com/photo-1571731956672-643b1be5b8d6" alt="Headphones" class="rounded-md mb-2 h-48 w-full object-cover">
+        <h4 class="font-semibold text-lg">Bluetooth Headphones</h4>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in {
+      animation: fade-in 1s ease-out;
+    }
+  </style>
+</body>
+</html>
